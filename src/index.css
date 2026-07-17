@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-display text-pine-ink;
+  }
+
+  :focus-visible {
+    outline: 3px solid theme("colors.signal.DEFAULT");
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  ::selection {
+    background: theme("colors.line");
+    color: theme("colors.pine.ink");
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full font-semibold transition-transform duration-150;
+  }
+  .btn:active {
+    transform: scale(0.97);
+  }
+  .btn-primary {
+    @apply btn bg-pine text-white px-5 py-3 hover:bg-pine-ink;
+  }
+  .btn-accent {
+    @apply btn bg-signal text-white px-5 py-3 hover:bg-signal-dark;
+  }
+  .btn-ghost {
+    @apply btn bg-transparent text-pine border border-pine/20 px-5 py-3 hover:bg-canvas-soft;
+  }
+
+  .card {
+    @apply bg-white rounded-xl2 border border-line shadow-card transition-shadow duration-200;
+  }
+  .card:hover {
+    @apply shadow-card-hover;
+  }
+
+  .input-field {
+    @apply w-full mt-1 px-4 py-3 rounded-xl bg-white border border-line text-ink placeholder:text-steel/60;
+  }
+
+  .eyebrow {
+    @apply font-mono text-xs tracking-[0.14em] uppercase text-signal-dark;
+  }
+
+  .section {
+    @apply max-w-6xl mx-auto px-6;
+  }
+}
+
+/* Root-mark line-draw animation, shared by the signature SVG component */
+.root-path {
+  stroke-dasharray: 140;
+  stroke-dashoffset: 140;
+}
+.root-path.is-drawn {
+  animation: draw 900ms ease-out forwards;
+}
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .root-path {
+    animation: none !important;
+    stroke-dashoffset: 0 !important;
+  }
+}
