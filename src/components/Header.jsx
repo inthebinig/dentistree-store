@@ -21,7 +21,7 @@ export default function Header() {
     <header className="sticky top-0 z-20 bg-canvas/95 backdrop-blur border-b border-line">
       <div className="section flex items-center justify-between py-4">
         <NavLink to="/" className="flex items-center gap-2 rounded-lg" onClick={() => setMenuOpen(false)}>
-          <img src="/logo.jpeg" alt="DentisTree Supplies" className="h-20 w-auto" />
+          <img src="/logo.jpeg" alt="DentisTree Supplies" className="h-16 w-auto" />
         </NavLink>
 
         {/* Desktop nav */}
