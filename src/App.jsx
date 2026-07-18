@@ -1,3 +1,6 @@
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Brands from "./pages/Brands";
 import React, { useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Header from "./components/Header";
@@ -33,7 +36,9 @@ export default function App() {
           <Route path="/checkout/success" element={<CheckoutSuccess />} />
           <Route path="/checkout/cancel" element={<CheckoutCancel />} />
           <Route path="*" element={<NotFound />} />
-        </Routes>
+        <Route path="/about" element={<About />} />
+<Route path="/contact" element={<Contact />} />
+<Route path="/brands" element={<Brands />} />
       </div>
       <Footer />
       <CartDrawer />
