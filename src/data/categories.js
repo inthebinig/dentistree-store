@@ -35,7 +35,7 @@ export const CATEGORIES = [
       { name: "Wires", items: ["NiTi Arch Wire", "Stainless Steel Wire", "TMA Wire"] },
       { name: "Elastics", items: ["Latex Elastics", "Power Chain", "Elastic Thread"] },
       { name: "Bonding", items: ["Ortho Primer", "Bracket Adhesive", "Etchant"] },
-      { name: "Accessories", items: ["Buccal Tubes", "Ligature Wire", "Ligature Ties", "Mini Screws", "Orthodontic Wax"] },
+      { name: "Accessories", items: ["Buccal Tubes", "Molar Bands", "Ligature Wire", "Ligature Ties", "Mini Screws", "Orthodontic Wax"] },
     ],
   },
   {
@@ -45,7 +45,7 @@ export const CATEGORIES = [
       { name: "Impression Materials", items: ["Alginate", "Putty Silicone", "Light Body Silicone", "Heavy Body Silicone", "Bite Registration"] },
       { name: "Temporary Crowns", items: ["Protemp", "Luxatemp", "Temporary Crown Forms"] },
       { name: "Cements", items: ["Zinc Phosphate", "Resin Cement", "Glass Ionomer Luting Cement", "Temporary Cement"] },
-      { name: "Wax", items: ["Base Plate Wax", "Inlay Wax", "Casting Wax", "Sticky Wax"] },
+      { name: "Wax", items: ["Base Plate Wax", "Inlay Wax", "Casting Wax", "Sticky Wax", "Denture Teeth"] },
     ],
   },
   {
@@ -137,6 +137,39 @@ export const CATEGORIES = [
       { name: "Scanners", items: ["Intraoral Scanner", "Scanner Tips"] },
       { name: "CAD/CAM", items: ["Zirconia Blocks", "PMMA Blocks", "Lithium Disilicate Blocks", "Milling Burs"] },
       { name: "3D Printing", items: ["Dental Resin", "Build Platform", "Printing Accessories"] },
+    ],
+  },
+  {
+    title: "Pediatric Dentistry",
+    icon: "🦷",
+    groups: [
+      { name: "Crowns", items: ["Pediatric Crowns", "Strip Crowns"] },
+      { name: "Preventive", items: ["Fluoride Varnish", "Sealants"] },
+      { name: "Behavior & Instruments", items: ["Behavior Management Aids", "Pediatric Instruments"] },
+    ],
+  },
+  {
+    title: "Anesthesia",
+    icon: "😴",
+    groups: [
+      { name: "Anesthetics", items: ["Local Anesthetic Cartridges", "Topical Anesthetic Gel"] },
+      { name: "Delivery", items: ["Syringes", "Needles", "Aspirating Syringes"] },
+    ],
+  },
+  {
+    title: "Radiology",
+    icon: "📸",
+    groups: [
+      { name: "Imaging Media", items: ["X-Ray Films", "Phosphor Plates", "RVG Sensors"] },
+      { name: "Accessories", items: ["Film Holders", "Lead Aprons", "Thyroid Collars"] },
+    ],
+  },
+  {
+    title: "Practice Essentials",
+    icon: "🧼",
+    groups: [
+      { name: "Patient & Storage", items: ["Patient Aprons", "Disposable Trays", "Instrument Trays", "Clinic Storage Boxes"] },
+      { name: "Waste Management", items: ["Sharps Containers", "Waste Bags", "Bib Clips"] },
     ],
   },
 ];
