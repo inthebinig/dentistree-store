@@ -1,6 +1,3 @@
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import Brands from "./pages/Brands";
 import React, { useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Header from "./components/Header";
@@ -13,6 +10,9 @@ import Checkout from "./pages/Checkout";
 import CheckoutSuccess from "./pages/CheckoutSuccess";
 import CheckoutCancel from "./pages/CheckoutCancel";
 import NotFound from "./pages/NotFound";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Brands from "./pages/Brands";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -35,10 +35,11 @@ export default function App() {
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/checkout/success" element={<CheckoutSuccess />} />
           <Route path="/checkout/cancel" element={<CheckoutCancel />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/brands" element={<Brands />} />
           <Route path="*" element={<NotFound />} />
-        <Route path="/about" element={<About />} />
-<Route path="/contact" element={<Contact />} />
-<Route path="/brands" element={<Brands />} />
+        </Routes>
       </div>
       <Footer />
       <CartDrawer />
