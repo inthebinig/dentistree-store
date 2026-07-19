@@ -1,36 +1,23 @@
 // ---------------------------------------------------------------------------
 // PRODUCT CATALOG
 // ---------------------------------------------------------------------------
-// A category only shows up as a shop tab once it has at least one product
-// with `available: true` — so it's safe to leave the full category list
-// below even before you've stocked every line.
+// `category` must exactly match a "title" in src/data/categories.js so the
+// mega menu and shop filters connect correctly. `group` is optional and
+// should match a group "name" within that category for subcategory filtering.
 //
 // To add a product: copy an existing entry, give it a unique `id`, a
-// `category` from CATEGORIES, a `price` (in dollars, e.g. 24.00), and set
-// `available: true`. Add `image: "/products/your-photo.jpg"` once you have
-// a real photo — drop the file in /public/products/. Until then it shows a
-// neutral placeholder so the grid still looks tidy.
+// `category` (and optionally `group`) from categories.js, a `price` (in
+// dollars), and set `available: true`. Add `image: "/products/your-photo.jpg"`
+// once you have a real photo — drop the file in /public/products/. Until
+// then it shows a neutral placeholder so the grid still looks tidy.
 // ---------------------------------------------------------------------------
-
-export const CATEGORIES = [
-  "Endodontic Files",
-  "Lubricants & Glides",
-  "Alginates & Impression",
-  "Alloys & Amalgam",
-  "Articulating Paper & Film",
-  "Cements",
-  "Composites",
-  "Orthodontics",
-  "Polishing Strips",
-  "Pumice",
-  "Typodonts",
-  "Other",
-];
 
 export const PRODUCTS = [
   {
     id: "f1",
-    category: "Endodontic Files",
+    category: "Endodontics",
+    group: "Hand Files",
+    brand: null,
     name: "K-File Hand Set",
     size: "21mm · Sizes 08–40",
     price: 24.0,
@@ -41,7 +28,9 @@ export const PRODUCTS = [
   },
   {
     id: "f2",
-    category: "Endodontic Files",
+    category: "Endodontics",
+    group: "Rotary Files",
+    brand: null,
     name: "NiTi Rotary File Kit",
     size: "6 files per pack",
     price: 145.0,
@@ -52,7 +41,9 @@ export const PRODUCTS = [
   },
   {
     id: "f3",
-    category: "Endodontic Files",
+    category: "Endodontics",
+    group: "Rotary Files",
+    brand: null,
     name: "ProTaper-Style File Set",
     size: "Sx–F5 · 25mm",
     price: 89.0,
@@ -63,7 +54,9 @@ export const PRODUCTS = [
   },
   {
     id: "l1",
-    category: "Lubricants & Glides",
+    category: "Endodontics",
+    group: "Irrigation",
+    brand: null,
     name: "EDTA Lubricating Gel",
     size: "5ml syringe",
     price: 12.5,
@@ -74,7 +67,9 @@ export const PRODUCTS = [
   },
   {
     id: "l2",
-    category: "Lubricants & Glides",
+    category: "Endodontics",
+    group: "Irrigation",
+    brand: null,
     name: "Chelating Lubricant Kit",
     size: "Box of 10 syringes",
     price: 18.0,
